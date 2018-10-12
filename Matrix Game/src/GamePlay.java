@@ -1,6 +1,8 @@
-
 public class GamePlay
 	{
-	create.board();
-	board.display();
+		public static void main(String[] args)
+		{
+			Board.createBoard();
+			Board.display();
+		}
 	}
