@@ -2,7 +2,9 @@ public class GamePlay
 	{
 		public static void main(String[] args)
 		{
-			Board.createBoard();
+			Board.fillTableOne();
+			Board.display();
+			Board.userMove();
 			Board.display();
 		}
 	}
