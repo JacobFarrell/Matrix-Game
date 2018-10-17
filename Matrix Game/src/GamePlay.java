@@ -4,7 +4,6 @@ public class GamePlay
 		{
 			Board.fillTableOne();
 			Board.display();
-			Board.userMove();
-			Board.display();
+			Board.wonGame();
 		}
 	}
