@@ -5,6 +5,14 @@ public class Board
 	static String move;
 	static String board [][]  = new String [3][3];
 	
+		public static void welcome()
+		{
+		System.out.println("Hello, and welcome to the Tic-Tac-Toe-Rama!");
+		System.out.println("Play tic-tac-toe for free!");
+		System.out.println("You will win once you get three in a row before the computer does!");
+		System.out.println("Here's the board!");
+		}
+	
 		public static void display()
 		{
 		System.out.println("        1            2            3      ");	
@@ -48,8 +56,8 @@ public class Board
 			int row = 0;
 			int col = 0;
 			
+			Scanner userInput = new Scanner (System.in);			
 			System.out.println("Where will your x go? ");
-			Scanner userInput = new Scanner (System.in);
 			move = userInput.nextLine();
 			
 			String rowInput = move.substring(0,1);
@@ -73,7 +81,7 @@ public class Board
 				row = 2;	
 				}	
 	
-			board[row][col] = "X";
+			board[row][col] = "X";			
 				
 		}
 		
@@ -111,19 +119,12 @@ public class Board
 					(board[2][0].equals(board[1][1]) && board[1][1].equals(board[0][2]) && !board[1][1].equals(" "))) 
 					{
 						System.out.println("The game has ended!");	
-						stillNoWinner = false;
+						System.exit(0);
 					}	
 			
 			}	
 		}
 				
 	}
-
-
-
-
-
-
-
 
 
